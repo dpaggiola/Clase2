@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\IBusinessLogic\IBusinessLogic.csproj" />
+    <ProjectReference Include="..\IDataAccess\IDataAccess.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+</Project>
