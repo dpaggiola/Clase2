@@ -6,6 +6,11 @@ namespace Test
     [TestClass]
     public class OrderTest
     {
+        [SetUp]
+        public void Setup()
+        {
+        }
+        
         [TestMethod]
         public void TestGetSetName()
         {
