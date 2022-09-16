@@ -15,11 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IDataAccess", "IDataAccess\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{0F62B6F3-4EF6-4249-9861-4B7183B99F22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI.Test", "WebAPI.Test\WebAPI.Test.csproj", "{15DA8EF0-5B03-461E-81AB-4F7647BF7213}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI.Test", "WebAPI.Test\WebAPI.Test.csproj", "{15DA8EF0-5B03-461E-81AB-4F7647BF7213}"
 	ProjectSection(ProjectDependencies) = postProject
 		{0F62B6F3-4EF6-4249-9861-4B7183B99F22} = {0F62B6F3-4EF6-4249-9861-4B7183B99F22}
 		{4DECD999-9E3F-4310-B6AB-FF60110591CA} = {4DECD999-9E3F-4310-B6AB-FF60110591CA}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.Test", "DataAccess.Test\DataAccess.Test.csproj", "{580E1076-2AF5-4960-B6CB-3AC22F989DC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{15DA8EF0-5B03-461E-81AB-4F7647BF7213}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15DA8EF0-5B03-461E-81AB-4F7647BF7213}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15DA8EF0-5B03-461E-81AB-4F7647BF7213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{580E1076-2AF5-4960-B6CB-3AC22F989DC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{580E1076-2AF5-4960-B6CB-3AC22F989DC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{580E1076-2AF5-4960-B6CB-3AC22F989DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{580E1076-2AF5-4960-B6CB-3AC22F989DC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

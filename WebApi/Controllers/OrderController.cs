@@ -36,7 +36,7 @@ namespace WebApi
                     DeliveryDateTime = createOrder.DeliveryDateTime
                 });
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 return BadRequest();
             }
