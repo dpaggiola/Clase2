@@ -39,7 +39,14 @@ namespace WebApi
             services.AddControllers();
 
             services.AddScoped<IOrderRepository, OrderRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+
             services.AddScoped<IOrderService, OrderService>();
+
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IGuidService, GuidService>();
+
+            services.AddScoped<FilterAuthentication>();
 
             string directory = System.IO.Directory.GetCurrentDirectory();
             IConfigurationRoot configuration = new ConfigurationBuilder()
