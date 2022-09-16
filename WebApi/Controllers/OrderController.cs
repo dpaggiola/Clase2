@@ -25,6 +25,8 @@ namespace WebApi
         }
 
         [HttpPost]
+        [ServiceFilter(typeof(FilterAuthentication))]
+        [ProtectFilter(RoleType.Admin)]
         public ActionResult Add([FromBody] Order order)
         {
             try
@@ -36,7 +38,7 @@ namespace WebApi
                     DeliveryDateTime = createOrder.DeliveryDateTime
                 });
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 return BadRequest();
             }
