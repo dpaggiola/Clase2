@@ -42,6 +42,7 @@ namespace WebApi
             services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddScoped<IOrderService, OrderService>();
+
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IGuidService, GuidService>();
 

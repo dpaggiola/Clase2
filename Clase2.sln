@@ -22,6 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI.Test", "WebAPI.Test\
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.Test", "DataAccess.Test\DataAccess.Test.csproj", "{580E1076-2AF5-4960-B6CB-3AC22F989DC5}"
+
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
