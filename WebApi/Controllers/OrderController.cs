@@ -1,13 +1,14 @@
+using System;
 using System.Linq;
 using Domain;
 using IBusinessLogic;
 using Microsoft.AspNetCore.Mvc;
 
-namespace WebApi.Controllers
+namespace WebApi
 {
     [ApiController]
     [Route("api/Orders")]
-    public class OrderController: ControllerBase
+    public class OrderController : ControllerBase
     {
         private IOrderService _orderService;
 
@@ -26,8 +27,19 @@ namespace WebApi.Controllers
         [HttpPost]
         public ActionResult Add([FromBody] Order order)
         {
-            _orderService.Create(order);
-            return Created("", order);
+            try
+            {
+                Order createOrder = _orderService.Create(order);
+                return CreatedAtRoute("AddOrder", new OrderBasicInfoModel()
+                {
+                    Id = createOrder.Id,
+                    DeliveryDateTime = createOrder.DeliveryDateTime
+                });
+            }
+            catch (ArgumentException e)
+            {
+                return BadRequest();
+            }
         }
     }
 }
