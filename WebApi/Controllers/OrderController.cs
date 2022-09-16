@@ -25,6 +25,8 @@ namespace WebApi
         }
 
         [HttpPost]
+        [ServiceFilter(typeof(FilterAuthentication))]
+        [ProtectFilter(RoleType.Admin)]
         public ActionResult Add([FromBody] Order order)
         {
             try
