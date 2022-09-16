@@ -14,9 +14,10 @@ namespace BusinessLogic
             this._repository = repository;
         }
 
-        public void Create(Order order)
+        public Order Create(Order order)
         {
-            _repository.Add(order);
+            Order createdOrder = _repository.Add(order);
+            return createdOrder;
         }
 
         public void Delete(Order order)

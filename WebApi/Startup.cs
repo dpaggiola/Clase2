@@ -37,8 +37,10 @@ namespace WebApi
                     builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             });
             services.AddControllers();
+
             services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddScoped<IOrderService, OrderService>();
+
             string directory = System.IO.Directory.GetCurrentDirectory();
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(directory)
